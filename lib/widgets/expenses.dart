@@ -1,9 +1,9 @@
-import 'dart:math';
-
 import 'package:expense_manager/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_manager/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_manager/modals/expense.dart';
+import 'package:expense_manager/widgets/chart/chart.dart';
+import 'package:expense_manager/widgets/chart/chart_bar.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -16,7 +16,7 @@ class _ExpensesState extends State<Expenses> {
   final List<Expense> _registeredExpenses = [
     Expense(
         title: 'Flutter course',
-        amount: 79.8,
+        amount: 20.8,
         date: DateTime.now(),
         category: Category.work),
     Expense(
@@ -80,7 +80,7 @@ class _ExpensesState extends State<Expenses> {
       ]),
       body: Column(
         children: [
-          const Text('The Chart'),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent,
           ),
