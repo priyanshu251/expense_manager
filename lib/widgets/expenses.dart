@@ -3,7 +3,6 @@ import 'package:expense_manager/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_manager/modals/expense.dart';
 import 'package:expense_manager/widgets/chart/chart.dart';
-import 'package:expense_manager/widgets/chart/chart_bar.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -13,18 +12,7 @@ class Expenses extends StatefulWidget {
 }
 
 class _ExpensesState extends State<Expenses> {
-  final List<Expense> _registeredExpenses = [
-    Expense(
-        title: 'Flutter course',
-        amount: 20.8,
-        date: DateTime.now(),
-        category: Category.work),
-    Expense(
-        title: 'Cinema',
-        amount: 78.9,
-        date: DateTime.now(),
-        category: Category.leisure),
-  ];
+  final List<Expense> _registeredExpenses = [];
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(

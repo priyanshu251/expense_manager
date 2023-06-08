@@ -55,7 +55,7 @@ class MainApp extends StatelessWidget {
                   fontSize: 16),
             ),
       ),
-      themeMode: ThemeMode.dark, //default
+      themeMode: ThemeMode.system, //default
       home: const Scaffold(
         body: Center(
           child: Expenses(),
